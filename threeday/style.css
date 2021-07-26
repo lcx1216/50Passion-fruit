@@ -1,0 +1,145 @@
+/* *{
+    box-sizing: border-box;
+} */
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: beige;
+    color: rgb(39, 102, 138);
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: rgb(252, 252, 244);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    box-sizing: border-box;
+}
+.container.show-nav{
+    transform: rotate(-25deg);
+}
+
+.top{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 243, 80);
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle button{
+    position: absolute;
+    cursor: pointer;
+    height: 100px;
+    color: #fff;
+    border: 0;
+    font-size: 26px;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    border: 0;
+}
+
+.circle button .iconfont{
+    font-size: 30px;
+
+}
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+    top: 48%;
+}
+.circle button#close{
+    top: 60%;
+    /* top: 50%;
+    left: 45%; */
+    transform: rotate(95deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li{
+    transform:translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    z-index: 100;
+    display: block
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+nav ul li{
+    color: rgb(87, 219, 137);
+    margin: 40px 0;
+    transform:translateX(-100%);
+    transition: transform 0.4s ease-in;
+    font-size: 18px;
+}
+
+nav ul li .iconfont{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav ul li + li{
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li + li + li{
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+.content{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1{
+    margin: 0;
+}
+
+.content img{
+    max-width: 100%;
+    padding: 0 0 10px 0;
+}
+
+.content small{
+    color: yellowgreen;
+    font-style: italic;
+}
+
+.content p{
+    color: teal;
+    line-height: 1.5;
+}
+
+
