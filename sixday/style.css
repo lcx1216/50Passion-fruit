@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(205, 238, 192);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+    margin: 0;
+}
+h1{
+    margin: 15px;
+    color:rgb(253, 189, 115);
+}
+.scrolll{
+    background-color: antiquewhite;
+    color: #68a39f;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5%;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+.scrolll:nth-of-type(even){
+    transform: translateX(-400%);
+}
+.scrolll.show{
+    transform: translateX(0);
+}
+.scrolll h2{
+    font-size: 30px;
+}

@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: fantasy;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.back{
+    background: url(../pic/1.jpg) no-repeat center center/cover;
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(0px);
+}
+
+.num{
+    font-size: 20px;
+    color: #fff;
+}

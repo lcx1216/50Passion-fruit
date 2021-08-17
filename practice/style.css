@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(80deg,rgb(173, 138, 194), rgb(189, 203, 247));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    position: relative;
+    height: 60px;
+}
+
+.container .input{
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    border: 0;
+    padding: 5px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.search{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.container.active .input{
+    width: 200px;
+}
+
+.container.active .search{
+    transform: translateX(198px);
+}
